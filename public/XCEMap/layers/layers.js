@@ -41,8 +41,23 @@ var lyr_SlopeRemovedElevation201501m_2 = new ol.layer.Vector({
                 title: '<img src="styles/legend/SlopeRemovedElevation201501m_2.png" /> Slope Removed Elevation (2015) (0.1m)'
             });
 
-lyr_Google_0.setVisible(true);lyr_RawElevation201501m_1.setVisible(true);lyr_SlopeRemovedElevation201501m_2.setVisible(false);
-var layersList = [lyr_Google_0,lyr_RawElevation201501m_1,lyr_SlopeRemovedElevation201501m_2];
+var lyr_ExcavationPlan_1 = new ol.layer.Image({
+                opacity: 1,
+                title: "Excavation Plan",
+                
+                
+                source: new ol.source.ImageStatic({
+                   url: "./layers/ExcavationPlan_1.png",
+attributions: ' ',
+                    projection: 'EPSG:3857',
+                    alwaysInRange: true,
+                    imageExtent: [-10862006.405571, 3583561.201176, -10861217.754886, 3584781.697534]
+                })
+            });
+
+
+lyr_Google_0.setVisible(true);lyr_RawElevation201501m_1.setVisible(false);lyr_SlopeRemovedElevation201501m_2.setVisible(false);lyr_ExcavationPlan_1.setVisible(true);
+var layersList = [lyr_Google_0,lyr_RawElevation201501m_1,lyr_SlopeRemovedElevation201501m_2, lyr_ExcavationPlan_1];
 lyr_RawElevation201501m_1.set('fieldAliases', {'fid': 'fid', 'ID': 'ID', 'ELEV': 'ELEV', });
 lyr_SlopeRemovedElevation201501m_2.set('fieldAliases', {'fid': 'fid', 'ID': 'ID', 'ELEV': 'ELEV', });
 lyr_RawElevation201501m_1.set('fieldImages', {'fid': 'TextEdit', 'ID': 'Range', 'ELEV': 'TextEdit', });
