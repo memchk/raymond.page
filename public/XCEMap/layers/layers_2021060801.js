@@ -55,9 +55,23 @@ attributions: ' ',
                 })
             });
 
+var lyr_DeansPlan_0 = new ol.layer.Image({
+                opacity: 1,
+                title: "Dean's Plan",
+                
+                
+                source: new ol.source.ImageStatic({
+                   url: "./layers/DeansPlan_0.png",
+attributions: ' ',
+                    projection: 'EPSG:3857',
+                    alwaysInRange: true,
+                    imageExtent: [-10861644.317822, 3583710.310274, -10861541.311598, 3584695.235030]
+                })
+            });
 
-lyr_Google_0.setVisible(true);lyr_RawElevation201501m_1.setVisible(false);lyr_SlopeRemovedElevation201501m_2.setVisible(false);lyr_ExcavationPlan_1.setVisible(true);
-var layersList = [lyr_Google_0,lyr_RawElevation201501m_1,lyr_SlopeRemovedElevation201501m_2, lyr_ExcavationPlan_1];
+
+lyr_Google_0.setVisible(true);lyr_RawElevation201501m_1.setVisible(false);lyr_SlopeRemovedElevation201501m_2.setVisible(false);lyr_ExcavationPlan_1.setVisible(true);lyr_DeansPlan_0.setVisible(true);
+var layersList = [lyr_Google_0,lyr_RawElevation201501m_1,lyr_SlopeRemovedElevation201501m_2, lyr_ExcavationPlan_1, lyr_DeansPlan_0];
 lyr_RawElevation201501m_1.set('fieldAliases', {'fid': 'fid', 'ID': 'ID', 'ELEV': 'ELEV', });
 lyr_SlopeRemovedElevation201501m_2.set('fieldAliases', {'fid': 'fid', 'ID': 'ID', 'ELEV': 'ELEV', });
 lyr_RawElevation201501m_1.set('fieldImages', {'fid': 'TextEdit', 'ID': 'Range', 'ELEV': 'TextEdit', });
