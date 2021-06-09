@@ -70,7 +70,7 @@ attributions: ' ',
             });
 
 
-lyr_Google_0.setVisible(true);lyr_RawElevation201501m_1.setVisible(false);lyr_SlopeRemovedElevation201501m_2.setVisible(false);lyr_ExcavationPlan_1.setVisible(true);lyr_DeansPlan_0.setVisible(true);
+lyr_Google_0.setVisible(true);lyr_RawElevation201501m_1.setVisible(false);lyr_SlopeRemovedElevation201501m_2.setVisible(false);lyr_ExcavationPlan_1.setVisible(false);lyr_DeansPlan_0.setVisible(true);
 var layersList = [lyr_Google_0,lyr_RawElevation201501m_1,lyr_SlopeRemovedElevation201501m_2, lyr_ExcavationPlan_1, lyr_DeansPlan_0];
 lyr_RawElevation201501m_1.set('fieldAliases', {'fid': 'fid', 'ID': 'ID', 'ELEV': 'ELEV', });
 lyr_SlopeRemovedElevation201501m_2.set('fieldAliases', {'fid': 'fid', 'ID': 'ID', 'ELEV': 'ELEV', });
