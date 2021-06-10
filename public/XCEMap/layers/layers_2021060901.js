@@ -61,7 +61,7 @@ var lyr_DeansPlan_0 = new ol.layer.Image({
                 
                 
                 source: new ol.source.ImageStatic({
-                   url: "./layers/DeansPlan_0.png",
+                   url: "./layers/DeansPlan_1.png",
 attributions: ' ',
                     projection: 'EPSG:3857',
                     alwaysInRange: true,
