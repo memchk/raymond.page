@@ -85,8 +85,26 @@ var lyr_GradedElevation_0 = new ol.layer.Vector({
             });
 
 
+var format_work_boundary_0 = new ol.format.GeoJSON();
+var features_work_boundary_0 = format_work_boundary_0.readFeatures(json_work_boundary_0, 
+            {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'});
+var jsonSource_work_boundary_0 = new ol.source.Vector({
+    attributions: ' ',
+});
+jsonSource_work_boundary_0.addFeatures(features_work_boundary_0);
+var lyr_work_boundary_0 = new ol.layer.Vector({
+                declutter: true,
+                source:jsonSource_work_boundary_0, 
+                style: style_work_boundary_0,
+                interactive: true,
+                title: '<img src="styles/legend/work_boundary_0.png" /> work_boundary'
+            });
+
+lyr_work_boundary_0.setVisible(true);
+
+
 lyr_Google_0.setVisible(true);lyr_RawElevation201501m_1.setVisible(false);lyr_SlopeRemovedElevation201501m_2.setVisible(false);lyr_GradedElevation_0.setVisible(true);lyr_ExcavationPlan_1.setVisible(false);lyr_DeansPlan_0.setVisible(false);
-var layersList = [lyr_Google_0,lyr_RawElevation201501m_1,lyr_SlopeRemovedElevation201501m_2, lyr_GradedElevation_0, lyr_ExcavationPlan_1, lyr_DeansPlan_0];
+var layersList = [lyr_Google_0,lyr_RawElevation201501m_1,lyr_SlopeRemovedElevation201501m_2, lyr_GradedElevation_0, lyr_ExcavationPlan_1, lyr_DeansPlan_0, lyr_work_boundary_0];
 lyr_RawElevation201501m_1.set('fieldAliases', {'fid': 'fid', 'ID': 'ID', 'ELEV': 'ELEV', });
 lyr_SlopeRemovedElevation201501m_2.set('fieldAliases', {'fid': 'fid', 'ID': 'ID', 'ELEV': 'ELEV', });
 lyr_RawElevation201501m_1.set('fieldImages', {'fid': 'TextEdit', 'ID': 'Range', 'ELEV': 'TextEdit', });
@@ -100,5 +118,12 @@ lyr_GradedElevation_0.set('fieldAliases', {'fid': 'fid', 'ID': 'ID', 'ELEV': 'EL
 lyr_GradedElevation_0.set('fieldImages', {'fid': 'TextEdit', 'ID': 'Range', 'ELEV': 'TextEdit', });
 lyr_GradedElevation_0.set('fieldLabels', {'fid': 'no label', 'ID': 'no label', 'ELEV': 'inline label', });
 lyr_GradedElevation_0.on('precompose', function(evt) {
+    evt.context.globalCompositeOperation = 'normal';
+});
+
+lyr_work_boundary_0.set('fieldAliases', {'fid': 'fid', });
+lyr_work_boundary_0.set('fieldImages', {'fid': 'TextEdit', });
+lyr_work_boundary_0.set('fieldLabels', {'fid': 'no label', });
+lyr_work_boundary_0.on('precompose', function(evt) {
     evt.context.globalCompositeOperation = 'normal';
 });
